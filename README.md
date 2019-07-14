@@ -1,25 +1,25 @@
 # Java4Learning
-## Java学习历程总结资料
+## 	Java学习历程总结资料
 
-###  JavaSE
+1. ###  JavaSE
 
-###   基础
+   #### 	基础
 
-#####   高并发（线程）
+   ​		高并发（线程）
 
-###  Servlet
+2. ### Servlet
 
-  Filter
+   #### 		Filter
 
-#####   Listener
+   #### 		Listener
 
-###  Spring
+3. ### Spring
 
-####   Springboot
+   #### 	Springboot
 
-####   Springcloud
+   #### 	Springcloud
 
-####   Springmvc
+   #### 					Springmvc
 
-###  Mybatis
+4. ### 	Mybatis
 
