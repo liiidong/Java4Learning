@@ -1,4 +1,4 @@
-package com.enough.rocketmqdemo.commontypes;
+package com.enough.rocketmqdemo.message;
 
 /**
  * @program: rocketmq-demo

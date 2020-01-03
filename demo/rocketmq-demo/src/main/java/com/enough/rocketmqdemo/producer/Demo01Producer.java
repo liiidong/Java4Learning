@@ -1,5 +1,6 @@
-package com.enough.rocketmqdemo.commontypes;
+package com.enough.rocketmqdemo.producer;
 
+import com.enough.rocketmqdemo.message.Demo01Message;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;

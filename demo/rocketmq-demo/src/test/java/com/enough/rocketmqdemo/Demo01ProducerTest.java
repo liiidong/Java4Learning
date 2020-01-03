@@ -1,6 +1,6 @@
 package com.enough.rocketmqdemo;
 
-import com.enough.rocketmqdemo.commontypes.Demo01Producer;
+import com.enough.rocketmqdemo.producer.Demo01Producer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -18,7 +18,7 @@ import java.util.concurrent.CountDownLatch;
  * @author: lidong
  * @create: 2020/01/02
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(classes = RocketmqDemoApplication.class)
 @Slf4j
 public class Demo01ProducerTest {
@@ -32,7 +32,11 @@ public class Demo01ProducerTest {
         SendResult sendResult = demo01Producer.syncSend(id);
         log.info("[testSyncSend][发送编号:[{}] 发送结果:[{}]", id, sendResult);
         // 阻塞等待，保证消费
-        new CountDownLatch(1).wait();
+        //        new CountDownLatch(1).wait();
+        //await()才是CountDownLatch里相应的等待函数。
+        //wait()是同步锁，是Object类的方法，与notify()配对使用的，使用时必须要有sychronized关键字。
+        new CountDownLatch(1).await();
+
     }
 
     @Test
@@ -51,7 +55,7 @@ public class Demo01ProducerTest {
         });
 
         // 阻塞等待，保证消费
-        new CountDownLatch(1).wait();
+        new CountDownLatch(1).await();
     }
 
     @Test
@@ -60,6 +64,6 @@ public class Demo01ProducerTest {
         demo01Producer.onewaySend(id);
         log.info("[testSyncSend][发送完成:[{}]]", id);
         // 阻塞等待，保证消费
-        new CountDownLatch(1).wait();
+        new CountDownLatch(1).await();
     }
 }
