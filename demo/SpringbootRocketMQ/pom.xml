@@ -7,9 +7,9 @@
         <artifactId>app-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>rocketmq-demo</artifactId>
+    <artifactId>SpringbootRocketMQ</artifactId>
     <version>${parent.version}</version>
-    <name>rocketmq-demo</name>
+    <name>SpringbootRocketMQ</name>
     <description>RocketMQ demo</description>
 
     <properties>
