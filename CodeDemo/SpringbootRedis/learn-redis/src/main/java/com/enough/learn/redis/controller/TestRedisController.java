@@ -1,6 +1,6 @@
 package com.enough.learn.redis.controller;
 
-import com.enough.learn.redis.entity.ReturnResult;
+import com.enough.common.commontypes.ReturnResult;
 import com.enough.learn.redis.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

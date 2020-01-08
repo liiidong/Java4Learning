@@ -1,6 +1,6 @@
 package com.enough.learn.redis.controller;
 
-import com.enough.learn.redis.entity.ReturnResult;
+import com.enough.common.commontypes.ReturnResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ui.ModelMap;
