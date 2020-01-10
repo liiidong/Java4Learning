@@ -9,6 +9,8 @@ spring:
     # Redis数据库索引（默认为0）
     database: 0
     password: lidong123.
+    # 连接超时时间（毫秒）
+    timeout: 0
     #这里写法可能不同，这里使用Jedis，因此这样写
     jedis:
       pool:
@@ -20,5 +22,8 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接
         min-idle: 0
-    # 连接超时时间（毫秒）
-    timeout: 0
+    # 对应 RedissonProperties 类
+    # 如果没有配置任何内容，需要在 application.yml 里注释掉 redisson.config
+#    redisson:
+#      config: classpath:redisson.yml # 具体的每个配置项，见 org.redisson.config.Config 类。
+
