@@ -101,6 +101,7 @@ public class RedisJedisConfig {
         // 设置redis连接信息
         container.setConnectionFactory(factory);
         // 将我们的消息监听对象设置给redis消息容器
+        //如果Topic不同，可以连续调用add方法新增监听对象，内部实现是Map<MessageListener, Set<Topic>> listenerTopics对象存贮
         container.addMessageListener(messageListener, new ChannelTopic("pubsubTest"));
         return container;
     }

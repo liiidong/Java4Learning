@@ -24,6 +24,11 @@ public class TestRedisController extends BaseController {
     @Autowired
     private RedisUtil redisUtil;
 
+    @GetMapping("hi")
+    public String hi(){
+        return "hello world";
+    }
+
     @PostMapping(path = "/redis")
     public ReturnResult <String> addRedisData(@RequestBody Map <String, String> map) {
         for (String key : map.keySet()) {
